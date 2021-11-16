@@ -11,7 +11,6 @@ function BookList() {
           <span>{book.title}</span>
           <span> by </span>
           <span>"{book.author}"</span>
-          <p>{book.id}</p>
           <button onClick={() => dispatch(remove(book.id))} type="button">Remove</button>
         </li>))}
     </ul>
