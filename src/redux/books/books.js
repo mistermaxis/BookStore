@@ -19,21 +19,21 @@ const initialState = {
   categories: [],
 };
 
-export default (state = initialState, action, payload) => {
-  switch (action) {
+export default (state = initialState, action) => {
+  switch (action.type) {
     case ADD_BOOK:
-      return { ...state, books: state.books.push(payload) };
+      return { ...state, books: [...state.books, action.book] };
     case REMOVE_BOOK:
-      return { ...state, books: state.books.filter((book) => book.id !== payload) };
+      return { ...state, books: state.books.filter((book, index) => index !== action.id) };
     default:
       return state;
   }
 };
 
-export function add() {
-  return { type: ADD_BOOK };
+export function add(payload) {
+  return { type: ADD_BOOK, book: payload };
 }
 
-export function remove() {
-  return { type: REMOVE_BOOK };
+export function remove(payload) {
+  return { type: REMOVE_BOOK, id: payload };
 }
