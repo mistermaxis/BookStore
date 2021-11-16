@@ -18,13 +18,11 @@ function AddBook() {
 
   const addBook = (event) => {
     event.preventDefault();
-    
     const newBook = {
       title: _title,
       author: _author,
       id: uuid().slice(0, 8),
     };
-    
     dispatch(add(newBook));
     setTitle('');
     setAuthor('');
