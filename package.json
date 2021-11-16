@@ -9,14 +9,16 @@
     "big.js": "^6.1.1",
     "bindings": "^1.5.0",
     "create-react-app": "^4.0.3",
+    "eslint-config-airbnb-base": "^14.2.1",
     "install-peerdeps": "^3.0.3",
     "nan": "^2.15.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "react-test-renderer": "^17.0.2",
-    "eslint-config-airbnb-base": "^14.2.1",
+    "redux": "^4.1.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
