@@ -6,7 +6,7 @@ function Books() {
     <div>
       <h1>Books</h1>
       <BookList />
-      <AddBook></AddBook>
+      <AddBook />
     </div>
   );
 }
