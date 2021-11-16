@@ -7,11 +7,12 @@ function BookList() {
 
   return (
     <ul>
-      {books.map((book, index) => (<li key={index}>
+      {books.map((book) => (<li key={book.id}>
           <span>{book.title}</span>
           <span> by </span>
           <span>"{book.author}"</span>
-        <button onClick={() => dispatch(remove(index))} type="button">Remove</button>
+          <p>{book.id}</p>
+          <button onClick={() => dispatch(remove(book.id))} type="button">Remove</button>
         </li>))}
     </ul>
   );

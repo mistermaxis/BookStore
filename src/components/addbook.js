@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuid } from 'uuid';
 import { add } from '../redux/books/books.js';
 
 function AddBook() {
   const [_title, setTitle] = useState('');
   const [_author, setAuthor] = useState('');
-  const [_id, setId] = useState(0);
   const dispatch = useDispatch();
 
   const handleChangeTitle = (event) => {
@@ -21,7 +21,9 @@ function AddBook() {
     const newBook = {
       title: _title,
       author: _author,
+      id: uuid().slice(0, 8),
     };
+    console.log(newBook);
     dispatch(add(newBook));
     setTitle('');
     setAuthor('');

@@ -2,20 +2,7 @@ const ADD_BOOK = 'bookstore/src/redux/books/add-book';
 const REMOVE_BOOK = 'bookstore/src/redux/books/remove-book';
 
 const initialState = {
-  books: [
-    {
-      title: 'Pim',
-      author: 'Pam',
-    },
-    {
-      title: 'Pum',
-      author: 'My Grandma',
-    },
-    {
-      title: 'One League',
-      author: 'Norton',
-    },
-  ],
+  books: [],
   categories: [],
 };
 
@@ -24,7 +11,7 @@ export default (state = initialState, action) => {
     case ADD_BOOK:
       return { ...state, books: [...state.books, action.book] };
     case REMOVE_BOOK:
-      return { ...state, books: state.books.filter((book, index) => index !== action.id) };
+      return { ...state, books: state.books.filter((book) => book.id !== action.id) };
     default:
       return state;
   }
