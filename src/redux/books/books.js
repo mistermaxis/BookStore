@@ -1,4 +1,4 @@
-import { apiGetBooks, apiAddBook } from '../../api/api.js';
+import { apiGetBooks, apiAddBook, apiDeleteBook } from '../../api/api.js';
 import apiToState from '../../converter/api-to-state.js';
 
 const ADD_BOOK = 'bookstore/src/redux/books/add-book';
@@ -46,5 +46,6 @@ export const addBook = (book) => async (dispatch) => {
 };
 
 export const removeBook = (id) => async (dispatch) => {
+  apiDeleteBook(id);
   dispatch(remove(id));
 };
