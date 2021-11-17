@@ -21,7 +21,7 @@ function AddBook() {
     const newBook = {
       title: _title,
       category: _category,
-      id: uuid().slice(0, 8),
+      item_id: uuid().slice(0, 8),
     };
     dispatch(add(newBook));
     setTitle('');
