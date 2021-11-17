@@ -8,9 +8,8 @@ function BookList() {
   return (
     <ul>
       {books.map((book) => (<li key={book.id}>
-          <span>{book.title}</span>
-          <span> by </span>
-          <span>"{book.author}"</span>
+          <span>Book: {book.title}</span>
+          <span> Category: {book.author}</span>
           <button onClick={() => dispatch(remove(book.id))} type="button">Remove</button>
         </li>))}
     </ul>

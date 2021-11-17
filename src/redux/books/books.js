@@ -3,7 +3,6 @@ const REMOVE_BOOK = 'bookstore/src/redux/books/remove-book';
 
 const initialState = {
   books: [],
-  categories: [],
 };
 
 export default (state = initialState, action) => {
