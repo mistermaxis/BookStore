@@ -1,5 +1,5 @@
-const APP_ID = 'w7Ib1BZ0vJLTJIirUdXL';
-const API_ADDRESS = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${APP_ID}/books`;
+import apiGetBooks from '../../api/api.js';
+
 const ADD_BOOK = 'bookstore/src/redux/books/add-book';
 const REMOVE_BOOK = 'bookstore/src/redux/books/remove-book';
 // const SET_BOOKS = 'bookstore/src/redux/books/set-books';
@@ -22,10 +22,7 @@ export default (state = initialState, action) => {
 };
 
 export const fetchBooks = () => async () => {
-  const response = await fetch(API_ADDRESS)
-    .then((response) => response.json());
-  // const apiBooks = await response.json();
-  console.log(response);
+  await apiGetBooks();
 };
 
 export function add(payload) {
