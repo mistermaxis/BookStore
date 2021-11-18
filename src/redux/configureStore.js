@@ -1,4 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import BooksReducer from './books/books.js';
 
@@ -8,7 +9,7 @@ const reducers = combineReducers({
 
 const store = createStore(
   reducers,
-  applyMiddleware(thunk),
+  applyMiddleware(logger, thunk),
 );
 
 export default store;

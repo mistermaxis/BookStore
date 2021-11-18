@@ -1,9 +1,9 @@
 import { apiGetBooks, apiAddBook, apiDeleteBook } from '../../api/api.js';
 import apiToState from '../../converter/api-to-state.js';
 
-const ADD_BOOK = 'bookstore/src/redux/books/add-book';
-const REMOVE_BOOK = 'bookstore/src/redux/books/remove-book';
-const SET_BOOKS = 'bookstore/src/redux/books/set-books';
+const ADD_BOOK = 'books/bookAdded';
+const REMOVE_BOOK = 'books/bookRemoved';
+const SET_BOOKS = 'books/booksLoaded';
 
 const initialState = {
   books: [],
