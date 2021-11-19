@@ -33,14 +33,14 @@
 }
 
 .book-title {
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, 'Courier New', Courier, monospace;
   font-weight: 700;
   font-size: 1.25rem;
   color: #121212;
 }
 
 .book-author {
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, 'Courier New', Courier, monospace;
   font-weight: 300;
   font-size: 0.875rem;
   color: #4386bf;
@@ -54,7 +54,7 @@
 .book-control {
   background: none;
   border: none;
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, 'Courier New', Courier, monospace;
   font-weight: 300;
   font-size: 0.875rem;
   color: #4386bf;
