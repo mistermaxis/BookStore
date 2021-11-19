@@ -43,8 +43,10 @@ function BookList() {
               </div>
             </div>
             <div className="progress-section">
-              <span className="chapter-header">CURRENT CHAPTER</span>
-              <span className="chapter-text">Chapter 4</span>
+              <div className="chapter-container">
+                <span className="chapter-header">CURRENT CHAPTER</span>
+                <span className="chapter-text">Chapter 4</span>
+              </div>
               <button className="update-button">UPDATE PROGRESS</button>
             </div>
           </div>
