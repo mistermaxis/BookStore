@@ -32,6 +32,22 @@ function BookList() {
               <button className="book-control" type="button">Edit</button>
             </div>
           </div>
+          <div className="right-side-container">
+            <div className="completed-section">
+              <div className="circle-container">
+                <div className="circle"></div>
+              </div>
+              <div className="completed-container">
+                <span className="completed-percentage">55%</span>
+                <span className="completed-text">Completed</span>
+              </div>
+            </div>
+            <div className="progress-section">
+              <span className="chapter-header">CURRENT CHAPTER</span>
+              <span className="chapter-text">Chapter 4</span>
+              <button className="update-button">UPDATE PROGRESS</button>
+            </div>
+          </div>
         </li>))}
     </ul>
   );
