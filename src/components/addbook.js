@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuid } from 'uuid';
-import { add } from '../redux/books/books.js';
+import { addBook } from '../redux/books/books.js';
 
 function AddBook() {
   const [_title, setTitle] = useState('');
-  const [_author, setAuthor] = useState('');
+  const [_category, setCategory] = useState('');
   const dispatch = useDispatch();
 
   const handleChangeTitle = (event) => {
@@ -13,25 +13,25 @@ function AddBook() {
   };
 
   const handleChangeAuthor = (event) => {
-    setAuthor(event.currentTarget.value);
+    setCategory(event.currentTarget.value);
   };
 
-  const addBook = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const newBook = {
       title: _title,
-      author: _author,
-      id: uuid().slice(0, 8),
+      category: _category,
+      item_id: uuid().slice(0, 8),
     };
-    dispatch(add(newBook));
+    dispatch(addBook(newBook));
     setTitle('');
-    setAuthor('');
+    setCategory('');
   };
 
   return (
-    <form onSubmit={addBook}>
+    <form onSubmit={handleSubmit}>
       <input onChange={handleChangeTitle} type="text" value={_title} required placeholder="Book Title"></input>
-      <input onChange={handleChangeAuthor} type="text" value={_author} required placeholder="Book Author"></input>
+      <input onChange={handleChangeAuthor} type="text" value={_category} required placeholder="Book Category"></input>
       <button type="submit">Add Book</button>
     </form>
   );
