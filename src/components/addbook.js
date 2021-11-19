@@ -33,8 +33,6 @@ function AddBook() {
       <h1 className="addbook-header">ADD NEW BOOK</h1>
       <div className="input-section">
         <input onChange={handleChangeTitle} type="text" value={_title} required placeholder="Book Title"></input>
-        {/* <input onChange={handleChangeAuthor}
-      type="text" value={_category} required placeholder="Book Category"></input> */}
         <input onChange={handleChangeCategory} required placeholder="Category" list="categories"/>
         <datalist id="categories">
           <option>Fantasy</option>
