@@ -42,6 +42,7 @@ function BookList() {
                 <span className="completed-text">Completed</span>
               </div>
             </div>
+            <div className="right-side-separator"></div>
             <div className="progress-section">
               <div className="chapter-container">
                 <span className="chapter-header">CURRENT CHAPTER</span>
