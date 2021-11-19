@@ -88,8 +88,8 @@
 }
 
 .circle {
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border: 5px solid #379cf6;
   border-radius: 100%;
 }
@@ -111,7 +111,8 @@
 .progress-section {
   display: flex;
   flex-direction: column;
-  row-gap: 1.5rem;
+  align-self: flex-start;
+  row-gap: 1.25rem;
 }
 
 .chapter-container {
