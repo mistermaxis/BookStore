@@ -5,6 +5,7 @@ function Books() {
   return (
     <div>
       <BookList />
+      <div className="h-separator"></div>
       <AddBook />
     </div>
   );
