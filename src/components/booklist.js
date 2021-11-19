@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeBook, fetchBooks } from '../redux/books/books.js';
+import './booklist.css';
 
 function BookList() {
   const dispatch = useDispatch();
@@ -15,11 +16,22 @@ function BookList() {
   };
 
   return (
-    <ul>
-      {books.map((book) => (<li key={book.item_id}>
-          <span>Book: {book.title}</span>
-          <span> Category: {book.category}</span>
-          <button onClick={() => handleClickRemove(book.item_id)} type="button">Remove</button>
+    <ul className="booklist-section">
+      {books.map((book) => (<li className="book-container" key={book.item_id}>
+          <div className="book-info">
+            <div className="book-info-main">
+              <span className="category">{book.category}</span>
+              <span className="book-title">{book.title}</span>
+              <span className="book-author">Suzanne Collins</span>
+            </div>
+            <div className="book-info-buttons">
+              <button className="book-control" type="button">Comments</button>
+              <div className="separator"></div>
+              <button className="book-control" onClick={() => handleClickRemove(book.item_id)} type="button">Remove</button>
+              <div className="separator"></div>
+              <button className="book-control" type="button">Edit</button>
+            </div>
+          </div>
         </li>))}
     </ul>
   );
