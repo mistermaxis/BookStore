@@ -7,7 +7,7 @@
 
 .book-container {
   display: flex;
-  padding: 1rem;
+  padding: 1.5rem 1rem 1rem 1.25rem;
   background-color: white;
   border: 1px solid #e8e8e8;
   border-radius: 0.25rem;
@@ -16,6 +16,7 @@
 .book-info {
   display: flex;
   flex-direction: column;
+  width: 45%;
   row-gap: 1rem;
 }
 
@@ -61,5 +62,89 @@
 }
 
 .separator {
-  border-left: 1px solid #e8e8e8;
+  border-left: 2px solid #e8e8e8;
+}
+
+.right-side-container {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  column-gap: 3rem;
+}
+
+.completed-section {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.completed-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.circle-container {
+  padding: 1rem;
+}
+
+.circle {
+  width: 4rem;
+  height: 4rem;
+  border: 5px solid #379cf6;
+  border-radius: 100%;
+}
+
+.completed-percentage {
+  font-family: Montserrat, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.completed-text {
+  font-family: Monserrat, sans-serif, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #12121280;
+}
+
+.progress-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.chapter-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.chapter-header {
+  margin-bottom: 0.2rem;
+  font-family: Roboto Slab, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 0.813rem;
+  color: #12121280
+}
+
+.chapter-text {
+  font-family: Roboto Slab, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #121212;
+}
+
+.update-button {
+  padding: 0.4rem 1.4rem;
+  border: none;
+  border-radius: 0.22rem;
+  background-color: #0290ff;
+  font-family: Roboto Slab, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 300;
+  color: white;
+}
+
+.right-side-separator {
+  border-left: 2px solid #e8e8e8;
+  height: 60%;
 }
