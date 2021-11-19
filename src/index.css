@@ -15,8 +15,7 @@ body {
   height: 50rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #f5f6fa; */
-  background-color: midnightblue;
+  background-color: #f5f6fa;
 }
 
 #root {
