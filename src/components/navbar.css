@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: 0.2rem solid yellow;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .header-logo {
