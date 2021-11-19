@@ -1,0 +1,59 @@
+.booklist-section {
+  padding: 1rem 5.5%;
+}
+
+.book-container {
+  display: flex;
+  padding: 1rem;
+  background-color: white;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.book-info-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  font-family: Monserrat, sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #12121280;
+}
+
+.book-title {
+  font-family: Roboto Slab;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #121212;
+}
+
+.book-author {
+  font-family: Roboto Slab;
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: #4386bf;
+}
+
+.book-info-buttons {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.book-control {
+  background: none;
+  border: none;
+  font-family: Roboto Slab;
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: #4386bf;
+}
+
+.separator {
+  border-left: 1px solid #e8e8e8;
+}
