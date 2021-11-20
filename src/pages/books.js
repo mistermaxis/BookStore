@@ -4,8 +4,8 @@ import AddBook from '../components/addbook.js';
 function Books() {
   return (
     <div>
-      <h1>Books</h1>
       <BookList />
+      <div className="h-separator"></div>
       <AddBook />
     </div>
   );

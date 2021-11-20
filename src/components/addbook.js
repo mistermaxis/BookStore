@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuid } from 'uuid';
 import { addBook } from '../redux/books/books.js';
+import './addbook.css';
 
 function AddBook() {
   const [_title, setTitle] = useState('');
@@ -12,7 +13,7 @@ function AddBook() {
     setTitle(event.currentTarget.value);
   };
 
-  const handleChangeAuthor = (event) => {
+  const handleChangeCategory = (event) => {
     setCategory(event.currentTarget.value);
   };
 
@@ -25,14 +26,23 @@ function AddBook() {
     };
     dispatch(addBook(newBook));
     setTitle('');
-    setCategory('');
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input onChange={handleChangeTitle} type="text" value={_title} required placeholder="Book Title"></input>
-      <input onChange={handleChangeAuthor} type="text" value={_category} required placeholder="Book Category"></input>
-      <button type="submit">Add Book</button>
+    <form className="addbook-container" onSubmit={handleSubmit}>
+      <h1 className="addbook-header">ADD NEW BOOK</h1>
+      <div className="input-section">
+        <input onChange={handleChangeTitle} type="text" value={_title} required placeholder="Book Title"></input>
+        <input onChange={handleChangeCategory} required placeholder="Category" list="categories"/>
+        <datalist id="categories">
+          <option>Fantasy</option>
+          <option>Fiction</option>
+          <option>Drama</option>
+          <option>Comedy</option>
+          <option>Action</option>
+        </datalist>
+        <button className="input-button" type="submit">ADD BOOK</button>
+      </div>
     </form>
   );
 }
